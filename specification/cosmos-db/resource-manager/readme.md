@@ -27,14 +27,30 @@ These are the global settings for the Cosmos-DB API.
 ``` yaml
 title: CosmosDBManagementClient
 openapi-type: arm
-tag: package-2021-04
+tag: package-preview-2021-06
 ```
 
+
+### Tag: package-preview-2021-06
+
+These settings apply only when `--tag=package-preview-2021-06` is specified on the command line.
+
+```yaml $(tag) == 'package-preview-2021-06'
+input-file:
+  - Microsoft.DocumentDB/preview/2021-06-01-preview/cosmos-db.json
+  - Microsoft.DocumentDB/preview/2021-06-01-preview/managedCassandra.json
+  - Microsoft.DocumentDB/preview/2021-06-01-preview/notebook.json
+  - Microsoft.DocumentDB/preview/2021-06-01-preview/privateEndpointConnection.json
+  - Microsoft.DocumentDB/preview/2021-06-01-preview/privateLinkResources.json
+  - Microsoft.DocumentDB/preview/2021-06-01-preview/rbac.json
+  - Microsoft.DocumentDB/preview/2021-06-01-preview/restorable.json
+  - Microsoft.DocumentDB/preview/2021-06-01-preview/services.json
+```
 ### Tag: package-2021-04
 
 These settings apply only when `--tag=package-2021-04` is specified on the command line.
 
-```yaml $(tag) == 'package-2021-04'
+``` yaml $(tag) == 'package-2021-04'
 input-file:
   - Microsoft.DocumentDB/stable/2021-04-15/cosmos-db.json
   - Microsoft.DocumentDB/stable/2021-04-15/notebook.json
@@ -49,7 +65,7 @@ modelerfour:
 
 These settings apply only when `--tag=package-2021-04` is specified on the command line.
 
-```yaml $(tag) == 'package-2021-04-preview'
+``` yaml $(tag) == 'package-2021-04-preview'
 input-file:
 - Microsoft.DocumentDB/preview/2021-04-01-preview/cosmos-db.json
 - Microsoft.DocumentDB/preview/2021-04-01-preview/notebook.json
@@ -67,7 +83,7 @@ modelerfour:
 
 These settings apply only when `--tag=package-2021-03` is specified on the command line.
 
-```yaml $(tag) == 'package-2021-03'
+``` yaml $(tag) == 'package-2021-03'
 input-file:
   - Microsoft.DocumentDB/stable/2021-03-15/cosmos-db.json
   - Microsoft.DocumentDB/stable/2021-03-15/notebook.json
@@ -95,12 +111,11 @@ modelerfour:
 tag: package-preview-2021-04
 ```
 
-
 ### Tag: package-preview-2021-04
 
 These settings apply only when `--tag=package-preview-2021-04` is specified on the command line.
 
-```yaml $(tag) == 'package-preview-2021-04'
+``` yaml $(tag) == 'package-preview-2021-04'
 input-file:
   - Microsoft.DocumentDB/preview/2021-04-01-preview/cosmos-db.json
   - Microsoft.DocumentDB/preview/2021-04-01-preview/managedCassandra.json
@@ -110,6 +125,7 @@ input-file:
   - Microsoft.DocumentDB/preview/2021-04-01-preview/rbac.json
   - Microsoft.DocumentDB/preview/2021-04-01-preview/restorable.json
 ```
+
 ### Tag: package-2021-01
 
 These settings apply only when `--tag=package-2021-01` is specified on the command line.
@@ -400,8 +416,6 @@ See configuration in [readme.go.md](./readme.go.md)
 ## Java
 
 See configuration in [readme.java.md](./readme.java.md)
-
-
 
 ## Multi-API/Profile support for AutoRest v3 generators
 
